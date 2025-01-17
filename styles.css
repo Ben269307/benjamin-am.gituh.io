@@ -1,0 +1,142 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s;
+}
+
+/* Curseur personnalisé */
+body {
+    cursor: none; /* Masquer le curseur par défaut */
+}
+
+.cursor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #00ff88; /* Couleur du curseur */
+    border-radius: 30%;
+    pointer-events: none; /* Empêche le curseur de bloquer les éléments interactifs */
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-in-out;
+    z-index: 9999;
+}
+
+/* Effet de survol du curseur */
+.cursor:hover {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Header */
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    list-style: none;
+}
+
+nav ul .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Introduction */
+.intro {
+    position: relative;
+    height: 60vh;
+    background: url('geii-background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.intro .intro-text {
+    z-index: 1;
+}
+
+.intro .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Sections */
+.about, .skills, .contact, .contact-form {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+button.plus {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button.plus:hover {
+    background-color: #388be4;
+}
+
+.skill-bar {
+    margin: 10px 0;
+}
+
+progress {
+    width: 100%;
+}
+
+#lang-toggle, #mode-toggle {
+    cursor: pointer;
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #333;
+}
+
+/* Transition binaire pour les modes */
+@keyframes binary {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

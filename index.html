@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Benjamin Amirthanathan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header et menu -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Benjamin GEII">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#">Les RéCaps</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Mon AE Alarme</a></li>
+                        <li><a href="#">Roomba</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">NE CLIQUE PAS ICI</a></li>
+                <li><a href="#" id="lang-toggle">FR</a></li>
+                <li><a href="#" id="mode-toggle">🌙</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Image de fond -->
+    <section class="intro">
+        <div class="background-image"></div>
+        <div class="intro-text">
+            <h1>Benjamin Amirthanathan</h1>
+            <p>Étudiant en 1ère année GEII</p>
+        </div>
+    </section>
+
+    <!-- Qui suis-je ? -->
+    <section class="about">
+        <h2>Qui suis-je ?</h2>
+        <p>Je suis étudiant en GEII, passionné par l’électronique et l’informatique industrielle. Je souhaite approfondir mes compétences en ingénierie et contribuer à des projets innovants.</p>
+        <button class="plus">Plus</button>
+    </section>
+
+    <!-- Compétences -->
+    <section class="skills">
+        <h2>Mes Compétences</h2>
+        <div class="skill-bar">
+            <label>Electronique</label>
+            <progress value="80" max="100"></progress>
+        </div>
+        <div class="skill-bar">
+            <label>Programmation</label>
+            <progress value="70" max="100"></progress>
+        </div>
+        <div class="skill-bar">
+            <label>Mathématiques</label>
+            <progress value="90" max="100"></progress>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+        <h2>Vous souhaitez me contacter ?</h2>
+        <p>Email : <span id="email">À ajouter plus tard</span></p>
+    </section>
+
+    <!-- Formulaire de contact -->
+    <section class="contact-form">
+        <h2>Contactez-moi</h2>
+        <form action="mailto:tonemail@example.com" method="POST" enctype="text/plain">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
